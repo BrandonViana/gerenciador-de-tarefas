@@ -18,7 +18,7 @@ function AddTask({ onAddTaskSubmit }) {
   };
 
   return (
-    <div className="space-y-4 p-6 bg-slate-200 text-blue-950 transition rounded-md shadow flex flex-col">
+    <div className="space-y-4 p-6 bg-slate-200 text-blue-950 dark:bg-blue-950 dark:text-white transition rounded-md shadow flex flex-col">
       <Input
         type="text"
         placeholder="Digite o título da tarefa"
@@ -33,8 +33,8 @@ function AddTask({ onAddTaskSubmit }) {
       />
       <button
         onClick={handleClick}
-        className="btn bg-blue-950 text-white px-4 py-2 rounded-md font-medium text-base 
-        cursor-pointer transition duration-200 ease-in-out hover:-translate-y-0.5 hover:scale-105 hover:bg-blue-900"
+        className="btn bg-blue-950 text-white dark:bg-blue-50 dark:text-blue-950 px-4 py-2 rounded-md font-medium text-base 
+        cursor-pointer transition duration-200 ease-in-out hover:-translate-y-0.5 hover:scale-105 dark:hover:bg-blue-50 hover:bg-blue-900 black:hover:bg- "
       >
         Adicionar Tarefa
       </button>
