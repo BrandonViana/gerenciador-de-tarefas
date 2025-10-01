@@ -40,9 +40,12 @@ function AddTask({ onAddTaskSubmit }) {
       </button>
       {showAlert && (
         <Alert
-          sx={{ color: "#1d3557", borderColor: "#1d3557" }}
-          variant="outlined"
           severity="info"
+          sx={{
+            color: "#1d3557",
+            variant: "filled",
+            borderColor: "#1d3557",
+          }}
         >
           Por favor preencha os dois campos
         </Alert>
