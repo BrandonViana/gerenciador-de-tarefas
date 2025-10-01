@@ -40,9 +40,9 @@ function App() {
 
   return (
     <div className="min-w-screen min-h-screen bg-blue-950 dark:bg-blue-50 flex justify-center p-6">
-      <div className="w-[500px] space-y-4">
+      <div className="w-full max-w-[500px] space-y-4">
         <div className="flex items-center justify-center p-6">
-          <div className="absolute top-4 left-4">
+          <div className="absolute top-2 right-2 sm:top-4 sm:left-4">
             <TailwindSwitch />
           </div>
           <h1 className="text-3xl text-slate-100 dark:text-blue-950 font-bold">
