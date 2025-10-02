@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export default function TailwindSwitch() {
+const TailwindSwitch = () => {
   const [theme, setTheme] = useState(
     () => localStorage.getItem("theme") || "light"
   );
@@ -36,7 +36,6 @@ export default function TailwindSwitch() {
         `}
       >
         {theme === "dark" ? (
-          // ícone LUA
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5 text-white"
@@ -46,7 +45,6 @@ export default function TailwindSwitch() {
             <path d="M4.2 2.5l-.7 1.8-1.8.7 1.8.7.7 1.8.6-1.8L6.7 5l-1.9-.7-.6-1.8zm15 8.3a6.7 6.7 0 11-6.6-6.6 5.8 5.8 0 006.6 6.6z" />
           </svg>
         ) : (
-          // ícone SOL
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5 text-white"
@@ -59,4 +57,6 @@ export default function TailwindSwitch() {
       </span>
     </button>
   );
-}
+};
+
+export default TailwindSwitch;

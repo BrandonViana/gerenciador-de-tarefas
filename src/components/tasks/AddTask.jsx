@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Input from "./Input";
+import Input from "../Input";
 import Alert from "@mui/material/Alert";
 function AddTask({ onAddTaskSubmit }) {
   const [title, setTitle] = useState("");
@@ -33,8 +33,8 @@ function AddTask({ onAddTaskSubmit }) {
       />
       <button
         onClick={handleClick}
-        className="btn bg-blue-950 text-white dark:bg-blue-50 dark:text-blue-950 px-4 py-2 rounded-md font-medium text-base 
-        cursor-pointer transition duration-200 ease-in-out hover:-translate-y-0.5 hover:scale-105 dark:hover:bg-blue-50 hover:bg-blue-900 black:hover:bg- "
+        className="btn bg-blue-950 text-white dark:bg-slate-200 dark:text-blue-950 px-4 py-2 rounded-md font-medium text-base 
+        cursor-pointer transition duration-200 ease-in-out hover:-translate-y-0.5 hover:scale-105 dark:hover:bg-slate-200 hover:bg-blue-900 black:hover:bg- "
       >
         Adicionar Tarefa
       </button>

@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import AddTask from "./components/AddTask";
-import Tasks from "./components/Tasks";
+import AddTask from "./components/tasks/AddTask";
+import Tasks from "./components/tasks/Tasks";
 import { v4 } from "uuid";
 import TailwindSwitch from "./components/TailwindSwitch"; // importa o switch
 
-function App() {
+const App = () => {
   const [tasks, setTasks] = useState(
     JSON.parse(localStorage.getItem("tasks")) || []
   );
@@ -13,7 +13,7 @@ function App() {
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
 
-  function onTaskClick(taskId) {
+  const onTaskClick = (taskId) => {
     const newTasks = tasks.map((task) => {
       if (task.id === taskId) {
         return { ...task, isCompleted: !task.isCompleted };
@@ -21,14 +21,14 @@ function App() {
       return task;
     });
     setTasks(newTasks);
-  }
+  };
 
-  function onDeleteTaskClick(taskId) {
+  const onDeleteTaskClick = (taskId) => {
     const newTasks = tasks.filter((task) => task.id !== taskId);
     setTasks(newTasks);
-  }
+  };
 
-  function onAddTaskSubmit(title, description) {
+  const onAddTaskSubmit = (title, description) => {
     const newTask = {
       id: v4(),
       title,
@@ -36,7 +36,7 @@ function App() {
       isCompleted: false,
     };
     setTasks([...tasks, newTask]);
-  }
+  };
 
   return (
     <div className="min-w-screen min-h-screen bg-blue-950 dark:bg-blue-50 flex justify-center items-center p-4">
@@ -59,6 +59,6 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
 export default App;
